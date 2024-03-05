@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Pull'){
             steps {
-                git 'https://gitlab.com/shubhampatil28.1999/jenkins-b-15.git'
+                git 'https://github.com/Patil7777/studentapp-ui.git'
             }
         }
         stage('Build'){
             steps {
-                echo 'Build Success'
+               sh '/opt/maven/bin/mvn clean package'
             }
         }
         stage('Test'){
